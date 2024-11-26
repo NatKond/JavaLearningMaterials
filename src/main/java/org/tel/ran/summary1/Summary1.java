@@ -1,8 +1,8 @@
-package org.tel.ran.summary;
+package org.tel.ran.summary1;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Summary {
+public class Summary1 {
     private static void hello(String name) {
         System.out.println("Hello " + name + "!");
     }
@@ -10,6 +10,7 @@ public class Summary {
     public static void main(String[] args) {
         System.out.println("There are " + Cat.counter + " cats");
         Cat cat1 = new Cat();
+        cat1.meow();
         cat1.name = "Fluffy";
         cat1.age = 5;
 
@@ -32,7 +33,7 @@ public class Summary {
         hello(name);
 
         char ch = 'a';
-        double asciiVAlue = ch;
+        int asciiVAlue = ch;
         float c = 10.7f;
         double sum = ch + c;
         System.out.println("asciiValue = " + asciiVAlue);

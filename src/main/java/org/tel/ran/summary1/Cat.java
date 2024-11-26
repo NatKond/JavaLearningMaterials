@@ -1,8 +1,8 @@
-package org.tel.ran.summary;
+package org.tel.ran.summary1;
 
 public class Cat {
-    public String name;
-    public int age;
+    public String name = "cat";
+    public int age = 0;
     public static int counter;
     public static int counterS;
 
@@ -19,7 +19,6 @@ public class Cat {
     }
 
     public Cat() {
-        this.name = "Street cat" + ++counterS;
         counter ++;
     }
 

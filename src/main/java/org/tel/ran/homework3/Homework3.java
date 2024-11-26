@@ -1,10 +1,10 @@
 package org.tel.ran.homework3;
 
-import org.tel.ran.summary.Calculator;
+import org.tel.ran.summary1.Calculator;
 
 import java.util.Locale;
 
-public class Homework {
+public class Homework3 {
     private static void sayHello(String name) {
         System.out.println("Hello " + name);
     }

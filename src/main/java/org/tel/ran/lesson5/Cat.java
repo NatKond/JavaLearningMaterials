@@ -4,7 +4,7 @@ public class Cat {
     String name;
     int age;
     static int count;
-    static int counterS;
+    static int counterStreetCat;
 
     Cat(String name, int age) {
         this.age = age;
@@ -13,19 +13,15 @@ public class Cat {
     }
 
     Cat(){
-        this.name = "Street cat " + ++counterS;
-        count++;
+        this ("Street cat " + ++counterStreetCat, 0);
     }
 
     Cat(int age){
-        this.age = age;
-        this.name = "Street cat " + ++counterS;
-        count++;
+        this ("Street cat " + ++counterStreetCat, age);
     }
 
     Cat(String name){
-       this.name = name;
-        count++;
+        this (name, 0);
     }
 
     @Override

@@ -37,5 +37,6 @@ public class Lesson6 {
         System.out.println("Random double: " + rand.nextDouble());
         System.out.println("Random boolean: " + rand.nextBoolean());
         System.out.println("Random from Math: " + Math.random());
+
     }
 }

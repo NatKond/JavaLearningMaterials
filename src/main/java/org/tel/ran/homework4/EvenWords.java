@@ -7,7 +7,6 @@ public class EvenWords {
     private String secondWord;
 
     public EvenWords() {
-
     }
 
     public String getFirstWord() {
@@ -41,7 +40,6 @@ public class EvenWords {
     public String switchHalves(){
         return firstWord.substring(0, firstWord.length()/2) + secondWord.substring(secondWord.length()/2);
     }
-
 
     @Override
     public String toString() {

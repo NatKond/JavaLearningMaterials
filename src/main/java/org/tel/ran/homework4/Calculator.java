@@ -7,19 +7,12 @@ public class Calculator {
     private int b;
 
     public Calculator() {
-        this.setA();
-        this.setB();
+
     }
 
     public Calculator(int a, int b) {
         this.a = a;
         this.b = b;
-    }
-
-    public void setA() {
-        Scanner scn = new Scanner(System.in);
-        System.out.print("Enter the first integer:");
-        this.a = scn.nextInt();
     }
 
     public void setA(int a) {
@@ -28,12 +21,6 @@ public class Calculator {
 
     public int getA() {
         return a;
-    }
-
-    public void setB() {
-        Scanner scn = new Scanner(System.in);
-        System.out.print("Enter the second integer:");
-        this.b = scn.nextInt();
     }
 
     public void setB(int b) {

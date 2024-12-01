@@ -7,32 +7,35 @@ public class EvenWords {
     private String secondWord;
 
     public EvenWords() {
-        setFirstWord();
-        setSecondWord();
+
     }
 
     public String getFirstWord() {
         return firstWord;
     }
 
-    public void setFirstWord() {
-        Scanner scn = new Scanner(System.in);
-        do {
-            System.out.print("Enter the first word with even number of letters:");
-            this.firstWord = scn.nextLine();
-        } while (firstWord.length() % 2 != 0);
+    public boolean setFirstWord(String firstWord) {
+       if (firstWord.length() % 2 == 0) {
+           this.firstWord = firstWord;
+           return true;
+       }
+       else {
+           return false;
+       }
     }
 
     public String getSecondWord() {
         return secondWord;
     }
 
-    public void setSecondWord() {
-        Scanner scn = new Scanner(System.in);
-        do {
-            System.out.print("Enter the second word with even number of letters:");
-            this.secondWord = scn.nextLine();
-        } while (secondWord.length() % 2 != 0);
+    public boolean setSecondWord(String secondWord) {
+        if (secondWord.length() % 2 == 0) {
+            this.secondWord = secondWord;
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     public String switchHalves(){

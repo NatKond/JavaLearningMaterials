@@ -9,9 +9,17 @@ public class StackOverflow {
             stack.push(i);
         }
         System.out.println("stack = " + stack);
-        int temp = stack.pop();
-        System.out.println("stack.pop = " + temp);
+
+        System.out.println("stack.peek() = " + stack.peek());
+        System.out.println("stack.search(4) = " + stack.search(4));
+        for (int i = 1; i < 10; i++) {
+            System.out.println("stack.pop() = " + stack.pop());
+        }
+        System.out.println("stack.empty() = " + stack.empty());
 
 
+        for (int i = 1; i > 0; i++) {
+            stack.push(i);
+        }
     }
 }

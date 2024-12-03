@@ -43,101 +43,131 @@ public class ArrayTasksExtended {
 
         int countZero = 0;
         for (int i = 0; i < array.length ; i++) {
-            if (array[i] ==0 ){
+            if (array[i] == 0 ){
                 countZero++;
             }
         }
 
-        int[] reducedArray = {array.length - countZero};
+        int[] reducedArray = new int [array.length - countZero];
+        int j = 0;
 
         for (int i = 0; i < array.length; i++) {
             if (array[i] != 0) {
-
+                reducedArray[j] = array[i];
+                j++;
             }
         }
-
+        array = reducedArray;
+        System.out.println("array = " + Arrays.toString(array));
     }
 
     // 20. Найти количество чисел, делящихся на заданное число без остатка.
     public static void task20() {
         int[] array = {10, 15, 20, 25, 30, 23};
         int divisor = 5;
+        System.out.println("array = " + Arrays.toString(array) + ", divisor = " + divisor);
 
-        int count = 0;
+        int countDivisible = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] % divisor == 0) {
-                count++;
+                countDivisible++;
             }
         }
-        System.out.println("count = " + count);
+        System.out.println("countDivisible = " + countDivisible);
     }
 
     // 21. Упорядочить массив по возрастанию.
     public static void task21() {
         int[] array = {4, 2, 7, 1, 3};
+        System.out.println("array = " + Arrays.toString(array));
+
+        boolean isArrayOrdered = false;
+        while (!isArrayOrdered){
+            isArrayOrdered = true;
+            for (int i = 0; i < array.length - 1; i++) {
+                if (array[i] > array [i+1]) {
+                    int temp = array[i];
+                    array[i] = array [i+1];
+                    array[i+1] = temp;
+                    isArrayOrdered = false;
+                }
+            }
+        }
+        System.out.println("arrayOrdered = " + Arrays.toString(array));
     }
 
     // 22. Найти индекс первого отрицательного элемента.
     public static void task22() {
         int[] array = {1, 2, -3, 4, -5};
-        int intNeg = 0;
+        System.out.println("array = " + Arrays.toString(array));
+        int firstIndNeg = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                intNeg = i;
+                firstIndNeg = i;
                 break;
             }
         }
-        System.out.println("intNeg = " + intNeg);
+        System.out.println("firstIndNeg = " + firstIndNeg);
     }
 
     // 23. Подсчитать сумму чисел на четных индексах.
     public static void task23() {
         int[] array = {1, 2, 3, 4, 5};
-        int summEven = 0;
+        System.out.println("array = " + Arrays.toString(array));
+        int summEvenI = 0;
         for (int i = 0; i < array.length; i++) {
-            if( i % 2 == 0){
-                summEven += array[i];
+            if(i % 2 == 0){
+                summEvenI += array[i];
             }
         }
-        System.out.println("summEven = " + summEven);
+        System.out.println("summEvenI = " + summEvenI);
     }
 
     // 24. Найти произведение всех элементов массива.
     public static void task24() {
         int[] array = {1, 2, 3, 4};
+        System.out.println("array = " + Arrays.toString(array));
+        int mul = array[0];
+        for (int i = 1; i < array.length; i++) {
+            mul *=array[i];
+        }
+        System.out.println("mul = " + mul);
     }
 
     // 25. Переместить все отрицательные числа в конец массива.
     public static void task25() {
         int[] array = {1, -2, 3, -4, 5};
+        System.out.println("array = " + Arrays.toString(array));
     }
 
     // 26. Найти количество уникальных элементов в массиве.
     public static void task26() {
         int[] array = {1, 2, 2, 3, 4, 4, 5};
+        System.out.println("array = " + Arrays.toString(array));
     }
 
     // 27. Переставить минимальный элемент массива в начало.
     public static void task27() {
         int[] array = {3, 2, 1, 4, 5};
+        System.out.println("array = " + Arrays.toString(array));
     }
 
     // 28. Найти длину самой длинной последовательности одинаковых элементов.
     public static void task28() {
         int[] array = {1, 1, 2, 2, 2, 3, 3};
+        System.out.println("array = " + Arrays.toString(array));
     }
 
     // 29. Найти сумму положительных элементов, расположенных после первого отрицательного.
     public static void task29() {
         int[] array = {1, -2, 3, 4, -5};
+        System.out.println("array = " + Arrays.toString(array));
     }
 
     // 30. Удалить все дубликаты из массива.
     public static void task30() {
         int[] array = {1, 2, 2, 3, 4, 4, 5};
-
+        System.out.println("array = " + Arrays.toString(array));
     }
 
-    public static void main(String[] args) {
-    }
 }

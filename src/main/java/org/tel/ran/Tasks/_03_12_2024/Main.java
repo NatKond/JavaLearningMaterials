@@ -73,5 +73,23 @@ public class Main {
         System.out.println("------------- Task24 ------------");
         ArrayTasksExtended.task24();
 
+        System.out.println("------------- Task25 ------------");
+        ArrayTasksExtended.task25();
+
+        System.out.println("------------- Task26 ------------");
+        ArrayTasksExtended.task26();
+
+        System.out.println("------------- Task27 ------------");
+        ArrayTasksExtended.task27();
+
+        System.out.println("------------- Task28 ------------");
+        ArrayTasksExtended.task28();
+
+        System.out.println("------------- Task29 ------------");
+        ArrayTasksExtended.task29();
+
+        System.out.println("------------- Task30 ------------");
+        ArrayTasksExtended.task30();
+
     }
 }

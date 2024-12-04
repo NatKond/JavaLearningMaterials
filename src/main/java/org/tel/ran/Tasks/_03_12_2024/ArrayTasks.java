@@ -49,13 +49,13 @@ public class ArrayTasks {
         int[] array = {4, 2, -1, 7};
         System.out.println("array = " + Arrays.toString(array));
 
-        int minI = 0;
+        int indexMin = 0;
         for (int i = 1; i < array.length; i++) {
-            if (array[i] < array[minI]) {
-                    minI = i;
+            if (array[i] < array[indexMin]) {
+                    indexMin = i;
             }
         }
-        System.out.println("minI = " + minI);
+        System.out.println("indexMin = " + indexMin);
     }
 
     // 5. Найти индекс максимального элемента массива.
@@ -63,13 +63,13 @@ public class ArrayTasks {
         int[] array = {4, 2, -1, 7};
         System.out.println("array = " + Arrays.toString(array));
 
-        int maxI = 0;
+        int indexMax = 0;
         for (int i = 1; i < array.length; i++) {
-            if (array[i] > array[maxI]) {
-                maxI = i;
+            if (array[i] > array[indexMax]) {
+                indexMax = i;
             }
         }
-        System.out.println("maxI = " + maxI);
+        System.out.println("indexMax = " + indexMax);
 
     }
 
@@ -78,13 +78,13 @@ public class ArrayTasks {
         int[] array = {4, -2, 0, 7};
         System.out.println("array = " + Arrays.toString(array));
 
-        int countPos = 0;
+        int countPositives = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > 0) {
-                countPos++;
+                countPositives++;
             }
         }
-        System.out.println("countPos = " + countPos);
+        System.out.println("countPositives = " + countPositives);
     }
 
     // 7. Посчитать количество отрицательных элементов.
@@ -92,13 +92,13 @@ public class ArrayTasks {
         int[] array = {4, -2, 0, -7};
         System.out.println("array = " + Arrays.toString(array));
 
-        int countNeg = 0;
+        int countNegatives = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
-                countNeg++;
+                countNegatives++;
             }
         }
-        System.out.println("countNeg = " + countNeg);
+        System.out.println("countNegatives = " + countNegatives);
     }
 
     // 8. Посчитать количество четных элементов.
@@ -154,8 +154,8 @@ public class ArrayTasks {
         for (int i = 1; i < array.length; i++) {
             sum += array[i];
         }
-        double arithmeticMean = sum/array.length;
-        System.out.println("arithmeticMean = " + arithmeticMean);
+        double average = sum/array.length;
+        System.out.println("average = " + average);
     }
 
     // 12. Вывести все элементы массива, которые больше среднего значения.
@@ -167,12 +167,12 @@ public class ArrayTasks {
         for (int i = 1; i < array.length; i++) {
             sum += array[i];
         }
-        double arithmeticMean = sum/array.length;
-        System.out.println("arithmeticMean = " + arithmeticMean);
+        double average = sum/array.length;
+        System.out.println("average = " + average);
 
         for (int i = 0; i < array.length; i++) {
-            if (array[i] > arithmeticMean){
-                System.out.println("array[" + i + "] = " + array[i] + " is bigger than arithmeticMean");
+            if (array[i] > average){
+                System.out.println("array[" + i + "] = " + array[i] + " is above average");
             }
         }
     }
@@ -194,36 +194,36 @@ public class ArrayTasks {
 
     // 14. Найти второй по величине элемент массива.
     public static void task14() {
-        int[] array = {4, 3, 2, 1};
+        int[] array = {1, 2, 3, 4};
         System.out.println("array = " + Arrays.toString(array));
 
-        int min = array[0];
-        int min2 = array[0];
+        int firstMin = array[0];
+
         for (int i = 1; i < array.length; i++) {
-            if (array[i] < min){
-                min = array[i];
+            if (array[i] < firstMin){
+                firstMin = array[i];
             }
-            /*if (array[i] < min){
-                min2 = min;
-                min = array[i];
+            /*if (array[i] < firstMin){
+                secondMin = firstMin;
+                firstMin = array[i];
             }
 
-            if (array[i] < min2 && array[i] > min){
-                min2 = array[i];
+            if (array[i] < secondMin && array[i] > firstMin){
+                secondMin = array[i];
             }*/
         }
-
-        if (min2 == min){
-            min2 = array[1];
+        int secondMin = array[0];
+        if  (firstMin == array[0]){
+            secondMin = array[1];
         }
 
         for (int i = 1; i < array.length; i++) {
-            if ((array[i] < min2) && (array[i] > min)){
-                min2 = array[i];
+            if ((array[i] < secondMin) && (array[i] > firstMin)){
+                secondMin = array[i];
             }
         }
 
-        System.out.println("min2 = " + min2);
+        System.out.println("secondMin = " + secondMin + ", firstMin = " + firstMin);
     }
 
     // 15. Переставить элементы массива в обратном порядке.
@@ -234,7 +234,7 @@ public class ArrayTasks {
         int[] reverse = new int[array.length];
 
         for (int i = 0; i < array.length; i++) {
-            reverse[array.length-i-1] = array[i];
+            reverse[(array.length - 1) - i] = array[i];
         }
         System.out.println("reverse = " + Arrays.toString(reverse));
     }

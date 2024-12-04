@@ -3,7 +3,6 @@ package org.tel.ran.Tasks._03_12_2024;
 public class Main {
     public static void main(String[] args) {
 
-        int[] array = {args.length};
         System.out.println("------------- Task1 ------------");
         ArrayTasks.task1();
 

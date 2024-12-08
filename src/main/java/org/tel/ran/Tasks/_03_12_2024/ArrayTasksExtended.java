@@ -215,6 +215,13 @@ public class ArrayTasksExtended {
 
         int maxSequenceLength = 0;
         for (int i = 0; i < array.length; i++) {
+            /*
+            int currentSequenceLength = 1;
+            for (int j = 1; i + j < array.length; j++) {
+                if (array[i] != array[i + j]) {
+                    break;
+                }
+            }*/
             int j = 1;
             while (i + j < array.length && array[i] == array [i + j]){
                 j++;

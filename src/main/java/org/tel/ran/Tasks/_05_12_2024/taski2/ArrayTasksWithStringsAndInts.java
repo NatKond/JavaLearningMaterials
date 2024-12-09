@@ -171,26 +171,19 @@ public class ArrayTasksWithStringsAndInts {
     public static void task30() {
         String[] array = {"apple", "banana", "cat", "dog", "race"};
         System.out.println("array = " + Arrays.toString(array));
-        int countAllLetters = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length(); j++) {
-                countAllLetters++;
-            }
+        String allWords = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+                allWords += array[i];
         }
-        String[] arrayAllLetters = new String[countAllLetters];
-        int k = 0;
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length(); j++) {
-                arrayAllLetters[k] = String.valueOf(array[i].charAt(j));
-                k++;
-            }
-        }
+
+        System.out.println("allWords = " + allWords);
 
         boolean isUnique = true;
         int countUniqueLetters = 0;
-        for (int i = 0; i < arrayAllLetters.length; i++) {
+        for (int i = 0; i < allWords.length(); i++) {
             for (int j = 1; i >= j; j++) {
-                if (arrayAllLetters[i].equals(arrayAllLetters[i - j])) {
+                if (allWords.charAt(i) == allWords.charAt(i-j)) {
                     isUnique = false;
                     break;
                 }
@@ -202,23 +195,21 @@ public class ArrayTasksWithStringsAndInts {
         }
 
         String[] arrayUniqueLetters = new String[countUniqueLetters];
-        k=0;
-        for (int i = 0; i < arrayAllLetters.length; i++) {
+        int k = 0;
+        for (int i = 0; i < allWords.length(); i++) {
             isUnique = true;
             for (int j = 1; i >= j; j++) {
-                if (arrayAllLetters[i].equals(arrayAllLetters[i - j])) {
+                if (allWords.charAt(i) == allWords.charAt(i-j)) {
                     isUnique = false;
                     break;
                 }
             }
             if (isUnique) {
-                arrayUniqueLetters[k] = arrayAllLetters[i];
+                arrayUniqueLetters[k] = String.valueOf(allWords.charAt(i));
                 k++;
             }
         }
-        System.out.println("arrayAllLetters = " + Arrays.toString(arrayAllLetters));
         System.out.println("arrayUniqueLetters = " + Arrays.toString(arrayUniqueLetters));
-
 
         ArrayList<String> listUniqueLetters = new ArrayList<>();
 
